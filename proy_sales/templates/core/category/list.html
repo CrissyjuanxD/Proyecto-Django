@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="table-container">
+    <br>
+    <h1 class="title">{{ title2 }}</h1>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Descripcion</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+         {% for item in categories %}
+           <tr>
+           <td>{{item.description}}</td>
+           <td>{% if item.state %}
+               ✔
+               {% else %}
+               ➖
+               {% endif %}
+           </td>
+           <td>
+             <a href={% url 'core:category_update' item.id  %}>✏️</a>
+             <a href={% url 'core:category_delete' item.id  %}>❌</a>
+           </td>
+           </tr>
+         {% endfor %}
+      </tbody>
+    </table>
+     <div class="form-group">
+       <a class="btn blue" href={% url 'core:category_create' %}>Nueva Categoria</a>
+     </div>
+  </div>
+{% endblock content  %}

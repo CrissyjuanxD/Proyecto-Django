@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="table-container">
+    <br>
+    <h1 class="title">{{ title2 }}</h1>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Marca</th>
+          <th>Categorias</th>
+          <th>Linea</th>
+          <th>Proveedor</th>
+          <th>Fecha Caducidad</th>
+          <th>Estado</th>
+      </tr>
+      </thead>
+      <tbody>
+        {% for item in products %}
+          <tr>
+          <td><img src={{item.image.url}} alt="" width="50px"> </td>
+          <td>{{item.description}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.stock}}</td>
+          <td>{{item.brand}}</td>
+          <td>{{item.get_categories}}</td>
+          <td>{{item.get_line_display}}</td>
+          <td>{{item.supplier}}</td>
+          <td>{{item.expiration_date |date:"Y-m-d"}}</td>
+          <td>{% if item.state %}
+               En stock
+              {% else %}
+               Agotado
+              {% endif %}
+          </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content  %}

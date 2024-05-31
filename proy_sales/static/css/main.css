@@ -1,0 +1,411 @@
+/* Importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: rgb(34, 22, 34);
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.title {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(to right, rgb(0, 0, 0), rgb(43, 43, 43));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+/* Estilos del encabezado */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background: linear-gradient(to right, #3c3799ac, #341fb0ad);
+    padding: 10px;
+}
+
+#header .logo {
+    font-size: 1.5em;
+}
+
+#header nav .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#header nav .menu li {
+    margin: 0 15px;
+}
+
+#header nav .menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos del menú hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.styled-table thead tr {
+    background: #31326f;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #8b1066;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .form-container {
+        max-width: 90%;
+    }
+}
+
+/* Estilos para los errores del formulario */
+.form-errors {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #dc3545;
+    border-radius: 8px;
+    background-color: #f8d7da;
+    color: #721c24;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form-errors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.form-errors li {
+    margin-bottom: 5px;
+}
+
+/* Estilos del formulario */
+.container{
+    margin:10px 20px;
+}
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: box-shadow 0.3s ease;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn {
+   
+    height: 40px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.blue{
+     background-color: #31326f;
+    color: #fff;
+}
+.red{
+    background-color: #ea5959;
+    color: #fff;
+}
+
+.btn.blue:hover {
+    background-color: #136885;
+}
+.btn.red:hover {
+    background-color: #901921;
+}
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: auto; /* Centra horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 300px; /* Limita el ancho del formulario */
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 0.8rem;
+    background-color: #31326f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #0f48b383;
+}
+
+@media (max-width: 400px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+}
+/* Estilos personalizados */
+.custom-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 60px;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-card .card-body {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20 -30px; /* Ajusta este valor para cambiar el espacio entre las tarjetas */
+}
+
+/* Estilos específicos para la página de inicio */
+.home-jumbotron {
+    font-family: 'Roboto', sans-serif; /* Cambia esto por la fuente que prefieras */
+}
+
+.home-title {
+    font-size: 3em; /* Aumenta el tamaño del título */
+    font-weight: bold; /* Haz que el título sea en negrita */
+    color: #000000; /* Cambia el color del título */
+    text-shadow: 2px 2px 4px #000000; /* Añade una sombra al texto para que destaque más */
+}
+
+.home-lead {
+    font-size: 1.5em; /* Aumenta el tamaño del texto debajo del título */
+    color: #333; /* Cambia el color del texto a un gris oscuro */
+    line-height: 1.6; /* Añade espacio entre las líneas de texto */
+    animation: fadeIn 2s; /* Añade una animación de desvanecimiento */
+    text-align: center; /* Centra el texto */
+    background-color: #f8f9fa; /* Añade un fondo de color al texto */
+    padding: 20px; /* Añade espacio alrededor del texto */
+    border-radius: 15px; /* Añade bordes redondeados al contenedor del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra al texto */
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

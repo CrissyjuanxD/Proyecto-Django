@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Inicio - SMART ZONE{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center bg-primary text-white home-jumbotron">
+    <h1 class="display-4 home-title">Bienvenido a SMART ZONE</h1>
+    <p class="lead home-lead">Encuentra los mejores gadgets y dispositivos a los mejores precios.</p>
+    <hr class="my-4">
+    <p class="home-lead">Explora nuestras categorías y descubre nuestras ofertas especiales en tecnología.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm custom-card">
+            <div class="image-container">
+                <img src="{% static 'images/laptops.jpeg' %}" class="card-img" alt="Laptops">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Laptops</h5>
+                <p class="card-text">Las últimas laptops con la tecnología más avanzada.</p>
+                <a class="btn btn-primary btn-lg blue" href="{% url 'core:listas' %}" role="button">Ver Productos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm custom-card">
+            <div class="image-container">
+                <img src="{% static 'images/smartphone.jpeg' %}" class="card-img" alt="Smartphones">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Smartphones</h5>
+                <p class="card-text">Los smartphones más innovadores del mercado.</p>
+                <a class="btn btn-primary btn-lg blue" href="{% url 'core:listas' %}" role="button">Ver Productos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm custom-card">
+            <div class="image-container">
+                <img src="{% static 'images/accesorios.jpeg' %}" class="card-img" alt="Accesorios">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Accesorios</h5>
+                <p class="card-text">Accesorios y periféricos para completar tu experiencia tecnológica.</p>
+                <a class="btn btn-primary btn-lg blue" href="{% url 'core:listas' %}" role="button">Ver Productos</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
